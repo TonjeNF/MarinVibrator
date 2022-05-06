@@ -1,0 +1,22 @@
+﻿Folder;DeplNumber;Hydrophone;StartTime;StopTime;LATdeg;LATmin;LONdeg;LONmin;Comment;Location;CalibrationFileBeginning;CalibrationStartIndBeginning;CalibrationStopIndBeginning;CalibrationFileEnd;CalibrationStartIndEnd;CalibrationStopIndEnd;CalibrationLevel;Depth;distance_to_bottom;BottomloggerID;Gain;sample_freq_Hz
+D1_BH1_Hydrophone_019;D1;H1;13.02.2022 09:54;14.02.2022 11:16;60;7.346;5;4.11;inner part of the bay;InnerBay;C_Pre_BH1_Hydrofon_019\019_20220207-145606.wav;1;end;C_Post_BH1_Hydrofon_019\019_20220307-103000.wav;1;end;148.5;66.1;8;RBR24080;20;48000
+D2_SoundTrap_5513;D2;H3;13.02.2022 07:57;17.02.2022 14:00;60;7.346;5;4.11;inner part of the bay;InnerBay;;;;;;;;66.1;8;RBR24080;?;?
+D3_Bouy_05;D3;H6;13.02.2022 12:04;16.02.2022 04:14;60;7.238;5;5.086;center of bay, upper ;CenterBayUpper;C__Pre_Bouy_Ch1_Hydrofon_05\005_20220208-093841.wav;1;end;C__Post_Bouy_Ch1_Hydrofon_05\005_20220307-100048.wav;1;end;148.5;8.2;;RBR24078;20;48000
+D4_Buoy_02;D4;H5;13.02.2022 12:04;16.02.2022 04:14;60;7.238;5;5.086;center of bay, lower;CenterBayLower;C__Pre_Bouy_Ch2_Hydrofon_02\002_20220208-095432.wav;1;end;NA;1;end;148.5;36.7;;RBR24076;20;48000
+D5_ BH2_Hydrophone_03;D5;H2;13.02.2022 10:01;14.02.2022 11:56;60;7.208;5;5.762;outer part of the bay;OuterBay;C__Pre_BH2_Hydrofon_03\003_20220207-152752.wav;1;end;C_Post_BH2_Hydrofon_03\003_20220307-101600.wav;1;end;148.5;46;8;82525 duet;20;48000
+D6_SoundTrap_5779;D6;H7;;;;;;;;;;;;;;;;;;;;
+D7_BH1_Hydrophone019;D7;H1;;;;;;;berre 3 minutt med opptak. Droppar denne;;;;;;;;;;;;;
+D8_BH2_Hydrophone_03;D8;H2;14.02.2022 15:33;17.02.2022 01:48;60;7.342;5;4.111;outer part of the bay;OuterBay;C__Pre_BH2_Hydrofon_03\003_20220207-152752.wav;1;end;C_Post_BH2_Hydrofon_03\003_20220307-101600.wav;1;end;148.5;47.2;8;82525 duet;20;48000
+D9_HullMounted;D9;H4;;;;;;;;;;;;;;;;;;;;
+D10_HullMounted;D10;H4;;;;;;;;;;;;;;;;;;;;
+D11_HullMounted_10dBgain;D11;H4;;;;;;;;;;;;;;;;;;;;
+D12_HullMounted;D12;H4;;;;;;;;;;;;;;;;;;;;
+D13_HullMounted;D13;H4;;;;;;;;;;;;;;;;;;;;
+D14_HullMounted;D14;H4;;;;;;;;;;;;;;;;;;;;
+D15_HullMounted;D15;H4;;;;;;;;;;;;;;;;;;;;
+D16_HullMounted;D16;H4;;;;;;;;;;;;;;;;;;;;
+D17_HullMounted;D17;H4;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
