@@ -85,7 +85,7 @@ for b=1:10;%blokk nr
                       col=[0.9290 0.6940 0.1250];
                 end
 
-              plot(Pulses.tidcum/60,Pulses.SELcum_dB,'.', 'MarkerFaceColor',col)
+              plot(Pulses.tidcum/60,Pulses.peakcum_dB,'.', 'MarkerFaceColor',col)
             hold on
             end
             title(['Block',num2str(b),', ' Dmeta(j).Location])
@@ -98,12 +98,12 @@ for b=1:10;%blokk nr
             end
             end
         xlabel('Time relative to start treatment, min')
-        ylabel('SEL (10 s), dB re 1 \muPa^2s')
+        ylabel('peak pressure ( every 10 s), dB re 1 \muPa')
         set(findobj(gcf,'type','axes'),'FontName','Calibri','FontSize',fsize, ...
             'FontWeight','Normal', 'LineWidth', lineW,'layer','top');
         set(findobj(gcf, 'Type', 'Line'),'LineWidth',lineW,'MarkerSize',MarkSz);
-        ylim([112 150])
-        print(f,fullfile([resdir,'\CompareSEL10s_Block',num2str(b),'_' ,Dmeta(j).Location]),'-dpng')
+        ylim([115 155])
+        print(f,fullfile([resdir,'\ComparePeak10s_Block',num2str(b),'_' ,Dmeta(j).Location]),'-dpng')
        
        
   
