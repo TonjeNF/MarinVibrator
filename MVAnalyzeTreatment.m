@@ -48,14 +48,19 @@ for j=1:length(Tmeta_i.Hydrophone)
         
         %Plukker ut ein time og legg til data for å kompensere for gap
         %mellom filer.
-                secHour=3600+3600/24 + (3600/24/24); % kompenserer for at vi har eit sekund gap og 23 sekund data. 1/24 del manglar. Legg til dette. (den delen vi legg til har og 1/24 del som manglar, dette må og leggjast til)
-        indHour = t > 3600 & (t <secHour+3600 );
-
+        %Endrer 17 apr 2023
+%                 secHour=3600+3600*2.89/24 + ((3600*2.89/24)*2.89/24); % kompenserer for at vi har eit sekund gap og 23 sekund data. 1/24 del manglar. Legg til dette. (den delen vi legg til har og 1/24 del som manglar, dette må og leggjast til)
+%         indHour = t > 3600 & (t <secHour+3600 );
+%Endrar på nyttt 25 aug. Det blir meir nøyaktig med antall samples på ein time sidan gap er litt uregelmessige (tek timen i midten)
+mm1=find(t>3600,1);%151242625;%3100*par.Fs;
+mm2=mm1-1+(par.Fs*3600);
 
         % Estimate SEL average
         D.Ex_all=(1/par.Fs)*sum(p.^2);
         D.SEL_all_dB=10*log10(D.Ex_all/1e-12);
-        D.Ex_1h=(1/par.Fs)*sum(p(indHour).^2); 
+  %      D.Ex_1h=(1/par.Fs)*sum(p(indHour).^2); 
+   %     D.SEL_1h_dB=10*log10(D.Ex_1h/1e-12);
+         D.Ex_1h=(1/par.Fs)*sum(p(mm1:mm2).^2); 
         D.SEL_1h_dB=10*log10(D.Ex_1h/1e-12);
         D.rms=20*log10(rms(p)./1e-6);
 
@@ -64,7 +69,7 @@ for j=1:length(Tmeta_i.Hydrophone)
         %3 hour SEL:
         %RMS for all period in plot and in txt.
        
-       
+       indHour=mm1:mm2;
 
     f= figure('Position', [0 0 s(3) s(4)], 'visible', 'off');
  plot(t/60,p)
@@ -88,12 +93,12 @@ plot(t(indHour)/60,p(indHour))
                         m1=1;
                         
                         for r=1:floor((length(t)-15*par.Fs)/par.Fs)
-                            m2=m1-1+(par.Fs*10);
+                            m2=m1-1+(par.Fs*10); %antall samples som tilsvarer 10 sek blir brukt. Dersom det er gap i datasettet blir det framleis brukt samples som tilsvarer 10 sekund, ved 3 sek gap blir 13 sek data brukt.
                             Pulses.SELcum_dB(r)=10*log10((1/par.Fs)*sum(p(m1:m2).^2)./1e-12);
                             Pulses.peakcum_dB(r)=20*log10(max(abs(p(m1:m2)))./1e-6);
                             Pulses.tidcum(r)=t(round(m1+(m2-m1)/2));
                             m1=m1+par.Fs;
-                            
+
                         end
 
                
